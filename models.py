@@ -10,7 +10,7 @@ metadata = MetaData(naming_convention={
 db = SQLAlchemy(metadata=metadata)
 
 class Restaurant(db.Model, SerializerMixin):
-    _tablename_ = 'restaurants'
+    __tablename__ = 'restaurants'
     
     serialize_rules = ('-pizzas.restaurant','-restaurant.pizzas')
     id = db.Column(db.Integer, primary_key=True)
@@ -26,7 +26,7 @@ class Restaurant(db.Model, SerializerMixin):
         return name
     
 class Pizza(db.Model, SerializerMixin):
-    _tablename_ = 'pizzas'
+    __tablename__ = 'pizzas'
     
     serialize_rules = ('-restaurants.pizza','-restaurant.pizzas')
     id = db.Column(db.Integer, primary_key=True)
@@ -38,7 +38,7 @@ class Pizza(db.Model, SerializerMixin):
     restaurants = db.relationship('RestaurantPizza',backref='pizzas')
 
 class RestaurantPizza(db.Model, SerializerMixin):
-    _tablename_ = 'restaurant_pizzas'
+    __tablename__ = 'restaurant_pizzas'
     
     serialize_rules = ('restaurant','pizza')
     id = db.Column(db.Integer, primary_key=True)

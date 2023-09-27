@@ -20,7 +20,7 @@ class Home(Resource):
     def get(self):
         
         response_dict ={
-            "message":"Welcome to PIzza Restaurant ",
+            "message":"Welcome to my Flask Code Challenge - Pizza Restaurants",
         }
         
         response = make_response(
