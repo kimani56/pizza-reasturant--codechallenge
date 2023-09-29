@@ -25,6 +25,6 @@ pytz==2023.3.post1
 six==1.16.0
 SQLAlchemy==2.0.21
 SQLAlchemy-serializer==1.4.1
-tomli==4.7.1
+tomli==2.0.1
 typing_extensions==4.8.0
 Werkzeug==2.3.7
