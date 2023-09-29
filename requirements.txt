@@ -28,3 +28,4 @@ SQLAlchemy-serializer==1.4.1
 tomli==1.1.0
 typing_extensions==4.6.2
 Werkzeug==2.2.1
+flask-swagger-ui== 4.11.1
